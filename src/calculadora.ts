@@ -30,6 +30,7 @@ export class Calculadora {
     }
 }
 
+export default Calculadora;
 
 //const cal = new Calculadora();
 //console.log(cal.sumar(1, 2));
