@@ -61,6 +61,20 @@ export class Calculadora {
         
     }
 
+    producto(a:number, b:number):number{
+        
+        let prod = 0;
+
+        if(a == 0 || b == 0){
+            return 0;
+        }
+
+        for(let i = 0; i < a; i++){
+            prod = this.sumar(prod, b);
+        }
+        return prod;
+    }
+
 }
 
 export default Calculadora;

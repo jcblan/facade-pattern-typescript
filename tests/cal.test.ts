@@ -41,5 +41,22 @@ describe('Test metodo Sumar', function() {
       let result = cal.restar(3, 3);
       expect(result).equal(0);
     }); 
+});
 
+  describe('Test metodo Producto', function() {
+    it('multiplicar 2 * 4 = 8', function() {
+      let cal = new Calculadora();
+      let result = cal.producto(2, 4);
+      expect(result).equal(8);
+    });
+    it('multiplicar 2 * 0 = 0', function() {
+      let cal = new Calculadora();
+      let result = cal.producto(2, 0);
+      expect(result).equal(0);
+    });
+    it('multiplicar 0 * 5 = 0', function() {
+      let cal = new Calculadora();
+      let result = cal.producto(0, 5);
+      expect(result).equal(0);
+    });
   });
