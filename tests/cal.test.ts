@@ -60,3 +60,16 @@ describe('Test metodo Sumar', function() {
       expect(result).equal(0);
     });
   });
+
+  describe('Test metodo Dividir', function() {
+    it('dividir 4 / 2 = 2', function() {
+      let cal = new Calculadora();
+      let result = cal.dividir(4, 2);
+      expect(result).equal(2);
+    });
+    it('dividir 4 / 0 = NULL', function() {
+      let cal = new Calculadora();
+      let result = cal.dividir(4, 0);
+      expect(result).equal(null);
+    });
+  });

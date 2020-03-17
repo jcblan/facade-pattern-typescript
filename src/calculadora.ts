@@ -75,6 +75,21 @@ export class Calculadora {
         return prod;
     }
 
+    dividir(dividendo:number, divisor:number):number{
+
+        if (divisor == 0){
+            return null;
+        }
+        let cociente = 0;
+
+        while(dividendo >= divisor){
+            dividendo = this.restar(dividendo, divisor);
+            cociente = this.sumar(cociente, 1);
+        }
+
+        return cociente;
+    }
+
 }
 
 export default Calculadora;
