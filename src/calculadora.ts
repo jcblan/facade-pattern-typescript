@@ -28,9 +28,39 @@ export class Calculadora {
         }
         return elem.length;
     }
+
+    restar(a: number, b:number):number {
+
+        if (a == b){
+            return 0;
+        }
+
+        let elem = [];
+        let men = 0; 
+        let may = 0;
+
+        if (a > b){
+            may = a;
+            men = b;
+        }else {
+            may = b;
+            men = a;
+        }
+    
+        for(let i = 0;i < may;i++)
+        {
+            elem.push("1");
+        }
+        
+        for(let i = 0;i < men;i++)
+        {
+            elem.pop();
+        }
+
+        return elem.length;
+        
+    }
+
 }
 
 export default Calculadora;
-
-//const cal = new Calculadora();
-//console.log(cal.sumar(1, 2));

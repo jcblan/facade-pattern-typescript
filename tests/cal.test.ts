@@ -24,3 +24,22 @@ describe('Test metodo Sumar', function() {
       expect(result).equal(1);
     });
   });
+
+  describe('Test metodo Restar', function() {
+    it('restar 3 - 2 = 1', function() {
+      let cal = new Calculadora();
+      let result = cal.restar(3, 2);
+      expect(result).equal(1);
+    });
+    it('restar 4 - 6 = 2', function() {
+      let cal = new Calculadora();
+      let result = cal.restar(4, 6);
+      expect(result).equal(2);
+    });
+    it('restar 3 - 3 = 0', function() {
+      let cal = new Calculadora();
+      let result = cal.restar(3, 3);
+      expect(result).equal(0);
+    }); 
+
+  });
