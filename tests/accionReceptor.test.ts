@@ -5,10 +5,16 @@ import AccionReceptor from "../src/AccionReceptor";
 
 
 describe('Test metodo AccionNumero', function() {
-    it('sumar 2 + 3 = 5', function() {
+    it('ActionNumero -> 2', function() {
         let r = new AccionReceptor();
         r.ActionNumero("2");
         expect(r.stateNumero).equal("2");
     });
+    it('ActionNumero -> 12', function() {
+        let r = new AccionReceptor();
+        r.ActionNumero("1");
+        r.ActionNumero("2");
+        expect(r.stateNumero).equal("12");
+    });  
 
 });
