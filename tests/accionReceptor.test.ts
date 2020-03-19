@@ -23,6 +23,15 @@ describe('Test metodo AccionNumero', function() {
         r.ActionNumero("3");
         expect(r.stateNumero).equal("123");
     });
+    it('ActionNumero -> 10000000000000000000000', function() {
+        let r = new AccionReceptor();
+        r.ActionNumero("1");
+        for(let i = 0; i < 22; i++){
+            r.ActionNumero("0");
+        }
+        expect(r.stateNumero).equal("10000000000000000000000");
+        //expect(r.stateNumero.length).equal(23);
+    });
     
 
 });
