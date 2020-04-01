@@ -40,7 +40,7 @@ class ParserFacade{
     }
 
 
-    parsearOperador(cadena: string){
+    parsear(cadena: string){
         let valores = cadena.split(" ");
         for(let i = 0; i < valores.length; i++){
             switch(valores[i]){
