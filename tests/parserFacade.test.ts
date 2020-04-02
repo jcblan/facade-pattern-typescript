@@ -30,4 +30,10 @@ describe('Test Parser', function() {
         p.parsear("uno cero");
         expect(r.stateNumero).equal("10");
     });
+    it('Duplicado"', function() {
+        let r = new AccionReceptor();
+        let p = new ParserFacade(r);
+        p.parsear("uno dos tres");
+        expect(r.stateNumero).equal("123");
+    });
 });
